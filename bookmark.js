@@ -51,9 +51,24 @@ function getBookmarks() {
             moveToReadLater(index);
         };
 
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.style.backgroundColor = "#ff0000";
+        deleteButton.style.color = "#ffffff";
+        deleteButton.style.border = "none";
+        deleteButton.style.padding = "5px 10px";
+        deleteButton.style.marginLeft = "10px";
+        deleteButton.style.cursor = "pointer";
+        deleteButton.style.transition = "background-color 0.3s";
+
+        deleteButton.onclick = function() {
+            deleteBookmark(index);
+        };
+
         newBookmarkElement.appendChild(bookmarkTitleElement);
         newBookmarkElement.appendChild(bookmarkTagsElement);
         newBookmarkElement.appendChild(readLaterButton);
+        newBookmarkElement.appendChild(deleteButton);
 
         bookmarkListContainer.appendChild(newBookmarkElement);
     });
@@ -73,6 +88,17 @@ function moveToReadLater(index) {
     // Refresh both lists
     getBookmarks();
     getReadLaterQueue();
+}
+
+// Function to delete a bookmark from the bookmarks list
+function deleteBookmark(index) {
+    let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    bookmarks.splice(index, 1); // Remove the bookmark at the specified index
+
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    // Refresh the bookmarks display
+    getBookmarks();
 }
 
 // Function to fetch Read Later queue from localStorage and update the list
@@ -99,9 +125,23 @@ function getReadLaterQueue() {
             revertToBookmarks(index);
         };
 
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.style.backgroundColor = "#ff0000";
+        deleteButton.style.color = "#ffffff";
+        deleteButton.style.border = "none";
+        deleteButton.style.padding = "5px 10px";
+        deleteButton.style.marginLeft = "10px";
+        deleteButton.style.cursor = "pointer";
+        deleteButton.style.transition = "background-color 0.3s";
+        deleteButton.onclick = function() {
+            deleteBookmarkFromReadLater(index);
+        };
+
         newBookmarkElement.appendChild(bookmarkTitleElement);
         newBookmarkElement.appendChild(bookmarkTagsElement);
         newBookmarkElement.appendChild(revertButton);
+        newBookmarkElement.appendChild(deleteButton);
 
         readLaterListContainer.appendChild(newBookmarkElement);
     });
@@ -120,6 +160,17 @@ function revertToBookmarks(index) {
 
     // Refresh both lists
     getBookmarks();
+    getReadLaterQueue();
+}
+
+// Function to delete a bookmark from the Read Later queue
+function deleteBookmarkFromReadLater(index) {
+    let readLater = JSON.parse(localStorage.getItem('readLater')) || [];
+    readLater.splice(index, 1); // Remove the bookmark at the specified index
+
+    localStorage.setItem('readLater', JSON.stringify(readLater));
+
+    // Refresh the Read Later queue display
     getReadLaterQueue();
 }
 
