@@ -64,7 +64,13 @@ function getBookmarks() {
         deleteButton.onclick = function() {
             deleteBookmark(index);
         };
+        deleteButton.addEventListener("mouseover", function() {
+            deleteButton.style.backgroundColor = "#cc0000";
+          });
 
+        deleteButton.addEventListener("mouseout", function() {
+            deleteButton.style.backgroundColor = "#ff0000";
+          });
         newBookmarkElement.appendChild(bookmarkTitleElement);
         newBookmarkElement.appendChild(bookmarkTagsElement);
         newBookmarkElement.appendChild(readLaterButton);
@@ -137,6 +143,14 @@ function getReadLaterQueue() {
         deleteButton.onclick = function() {
             deleteBookmarkFromReadLater(index);
         };
+
+        deleteButton.addEventListener("mouseover", function() {
+            deleteButton.style.backgroundColor = "#cc0000";
+          });
+
+          deleteButton.addEventListener("mouseout", function() {
+            deleteButton.style.backgroundColor = "#ff0000";
+          });
 
         newBookmarkElement.appendChild(bookmarkTitleElement);
         newBookmarkElement.appendChild(bookmarkTagsElement);
