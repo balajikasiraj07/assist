@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Holder - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bookmark Holder</h1>
+    </header>
+    <main>
+        <section class="homepage-container">
+            <article class="left-container">
+                <h2>Discover and Save Articles!</h2>
+                <p>Never lose a great article again. Bookmark and read them at your own pace.</p>
+            </article>
+            <aside class="right-container">
+                <section class="signin-form">
+                    <h2>Sign In</h2>
+                    <form>
+                        <label for="username">Username or Email:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit" class="btn primary" onclick="navigateToDashboard(event)">Sign In</button>
+                    </form>
+                    <a href="#forgot-password">Forgot Password?</a>
+                </section>
+                <section class="signup-section">
+                    <h2>Don't have an account?</h2>
+                    <a href="signup.html" class="btn green">Sign Up</a>
+                </section>
+                <section class="social-auth">
+                    <p>Or sign in with:</p>
+                    <a href="#google" class="social-btn" onclick="signInWithGoogle(event)" aria-label="Sign in with Google"><i class="fab fa-google"></i></a>
+                    <a href="#facebook" class="social-btn" aria-label="Sign in with Facebook"><i class="fab fa-facebook"></i></a>
+                </section>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bookmark Holder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navigateToDashboard = (event) => {
+            event.preventDefault();
+            window.location.href = "dashboard.html";
+        }
+        // remaining code...
+    </script>
+    
+</body>
+</html>

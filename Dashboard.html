@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Holder - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+        <!-- Add navigation links or user profile info here if needed -->
+    </header>
+    <main>
+        <section class="bookmark-form">
+            <h2>Add a New Bookmark</h2>
+            <div class="input-container">
+                <input type="text" id="bookmarkName" placeholder="Enter the name of the bookmark" name="subject" required>
+                <input type="url" id="bookmarkURL" placeholder="Enter the bookmark URL" name="website" required>
+                <input type="text" id="bookmarkTags" placeholder="Enter tags (comma-separated)" name="tags" required>
+                <button class="btn primary" onclick="saveBookmark()">Save</button>
+            </div>
+        </section>
+        <section class="search-form">
+            <h2>Search Your Bookmarks</h2>
+            <input type="text" id="searchQuery" placeholder="Enter search query" oninput="filterBookmarks()">
+        </section>
+        <section class="bookmarks">
+            <h2>Your Bookmarks</h2>
+            <div class="bookmark-list" id="bookmarkList">
+                <!-- Bookmarks with 'Read Later' button will be dynamically added here -->
+            </div>
+        </section>
+        <section class="read-later">
+            <h2>Read Later Queue</h2>
+            <div class="read-later-list" id="readLaterList">
+                <!-- Bookmarks in Read Later queue with 'Revert' button will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bookmark Holder. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript to handle bookmark saving, retrieving, moving to 'Read Later' queue, and reverting back -->
+    <script src="bookmark.js"></script>
+</body>
+</html>
