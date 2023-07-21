@@ -196,6 +196,7 @@ a:hover {
 
 .social-btn {
     display: inline-block;
+    width: 50%;
     margin: 0 5px;
     padding: 10px;
     border-radius: 50%;
