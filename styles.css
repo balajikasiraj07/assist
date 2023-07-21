@@ -92,7 +92,9 @@ a:hover {
 .left-container {
     margin-bottom: 20px; /* Add margin to separate the two containers */
 
+
     width: 100%;
+
 
 }
 
@@ -114,6 +116,7 @@ a:hover {
   .left-container, .right-container {
     width: 100%;
   }
+
 
 }
 
@@ -191,6 +194,7 @@ a:hover {
     width: 48%;
   }
 
+
 }
 
 .social-btn {
@@ -207,5 +211,3 @@ a:hover {
 .social-btn:hover {
     background-color: #e0e0f0;
 }
-
-
