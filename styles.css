@@ -85,28 +85,11 @@ a:hover {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
-    width: 45%; /* Adjust the width as needed, 45% to leave space for both containers */
-}
-
-.left-container {
-    margin-bottom: 20px; /* Add margin to separate the two containers */
-
     width: 100%;
-
 }
 
 /* Responsive Styles for Mobile View */
 @media screen and (max-width: 767px) {
-
-    .homepage-container {
-        flex-direction: column;
-    }
-
-    .left-container, .right-container {
-        width: 100%;
-    }
-
   .homepage-container {
     flex-direction: column;
   }
@@ -114,74 +97,10 @@ a:hover {
   .left-container, .right-container {
     width: 100%;
   }
-
 }
 
 /* Responsive Styles for iPad View */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-    .homepage-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .left-container, .right-container {
-        width: 48%;
-    }
-}
-
-/* Styles for the sign-in form in the right container */
-.signin-form {
-    margin-bottom: 20px; /* Add margin to separate the form from other sections */
-}
-
-.signin-form label {
-    display: block;
-    font-weight: bold;
-}
-
-.signin-form input[type="text"],
-.signin-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.signin-form button {
-    display: block;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.signin-form button:hover {
-    background-color: #444;
-}
-
-.signin-form a {
-    color: #333;
-    text-decoration: none;
-}
-
-.signin-form a:hover {
-    color: #444;
-}
-
-.social-auth {
-    text-align: center; /* Center the social auth links */
-}
-
-.social-auth p {
-    margin-bottom: 10px; /* Add margin below the "Or sign in with" text */
-
   .homepage-container {
     flex-direction: row;
     justify-content: space-between;
@@ -190,7 +109,6 @@ a:hover {
   .left-container, .right-container {
     width: 48%;
   }
-
 }
 
 .social-btn {
