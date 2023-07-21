@@ -32,6 +32,16 @@ input[type="text"], input[type="password"], input[type="url"] {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+/* Responsive textbox for Mobile View */
+@media screen and (max-width: 767px) { 
+    input[type="text"], input[type="password"], input[type="url"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
 
 button {
     background-color: #333;
