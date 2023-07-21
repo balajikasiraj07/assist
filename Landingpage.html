@@ -17,6 +17,7 @@
   gtag('config', 'G-LD6X03TJDS');
 </script>
 <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <header>
         <h1>Bookmark Holder</h1>
     </header>
@@ -44,10 +45,26 @@
                     <h2>Don't have an account?</h2>
                     <a href="signup.html" class="btn primary">Sign Up</a>
                 </section>
+                
                 <section class="social-auth">
                     <p>Or sign in with:</p>
-                    <a href="#google" class="social-btn" onclick="signInWithGoogle(event)" aria-label="Sign in with Google"><i class="fab fa-google"></i></a>
-                    <a href="#facebook" class="social-btn" aria-label="Sign in with Facebook"><i class="fab fa-facebook"></i></a>
+                    <div 
+                        id="g_id_onload"
+                        data-client_id="779314283755-03vsa1rr7jaghtke3t8s8dv2g7f2fa9s.apps.googleusercontent.com"
+                        data-login_uri="https://balajikasiraj07.github.io/assist/dashboard.html"
+                        data-auto_prompt="false">
+                    </div>
+
+                    <div 
+                        class="g_id_signin"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
+                    
                 </section>
             </aside>
         </section>
