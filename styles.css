@@ -40,9 +40,9 @@ input[type="text"], input[type="password"], input[type="url"] {
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
-        border: 1px solid #ccc; }
+        border: 1px solid #ccc;
 }
-
+}
 button {
     background-color: #333;
     color: #fff;
@@ -102,7 +102,8 @@ a:hover {
 
 
 /* Responsive Styles for Mobile View */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { 
+
     .homepage-container {
         flex-direction: column;
         
