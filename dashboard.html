@@ -49,6 +49,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <footer>
         <p>&copy; 2023 Bookmark Holder. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Google Analytics Event Tracking
+        function trackButtonClick(buttonLabel) {
+            gtag('event', 'click', {
+                'event_category': 'Button Clicks',
+                'event_label': buttonLabel
+            });
+    </script>
     <script src="bookmark.js"></script>
 </body>
 </html>
