@@ -73,6 +73,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </footer>
 
     <script>
+         // Google Analytics Event Tracking
+        function trackButtonClick(buttonLabel) {
+            gtag('event', 'click', {
+                'event_category': 'Button Clicks',
+                'event_label': buttonLabel
+            });
+            // Call the original function to navigate to the dashboard
+            navigateToDashboard(event);
+        }
+        
         const navigateToDashboard = (event) => {
             event.preventDefault();
             window.location.href = "dashboard.html";
