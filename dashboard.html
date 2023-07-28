@@ -3,73 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmark Holder - Home</title>
+    <title>Bookmark Holder - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TXWJVSXZ');</script>
-    <!-- End Google Tag Manager -->
 </head>
- 
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXWJVSXZ');</script>
+<!-- End Google Tag Manager -->
+</script>
 <body>
-    <!-- Google Sign-In Integration -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-
     <header>
-        <h1>Bookmark Holder</h1>
+        <h1>Welcome to Your Dashboard</h1>
+        <!-- Add navigation links or user profile info here if needed -->
     </header>
     <main>
-        <section class="homepage-container">
-            <!-- Left Container -->
-            <article class="left-container">
-                <h2>Discover and Save Articles!</h2>
-                <p>Never lose a great article again. Bookmark and read them at your own pace.</p>
-            </article>
-            <!-- Right Container -->
-            <aside class="right-container">
-                <section class="signin-form">
-                    <h2>Sign In</h2>
-                    <!-- Add the onsubmit event to prevent the default form submission -->
-                    <form onsubmit="navigateToDashboard(event)">
-                        <label for="username">Username or Email:</label>
-                        <input type="text" id="username" name="username" required>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <!-- Remove the onclick attribute from the button -->
-                        <button type="submit" class="btn primary">Sign In</button>
-                    </form>
-                    <a href="#forgot-password">Forgot Password?</a>
-                </section>
-                <section class="signup-section">
-                    <h2>Don't have an account?</h2>
-                    <a href="signup.html" class="btn primary">Sign Up</a>
-                </section>
-                
-                <section class="social-auth">
-                    <p>Or sign in with:</p>
-                    <div 
-                        id="g_id_onload"
-                        data-client_id="779314283755-03vsa1rr7jaghtke3t8s8dv2g7f2fa9s.apps.googleusercontent.com"
-                        data-login_uri="https://balajikasiraj07.github.io/assist/dashboard.html"
-                        data-auto_prompt="false">
-                    </div>
-
-                    <div 
-                        class="g_id_signin"
-                        data-type="standard"
-                        data-size="large"
-                        data-theme="outline"
-                        data-text="sign_in_with"
-                        data-shape="rectangular"
-                        data-logo_alignment="center">
-                    </div>
-                    
-                </section>
-            </aside>
+        <section class="bookmark-form">
+            <h2>Add a New Bookmark</h2>
+            <div class="input-container">
+                <input type="text" id="bookmarkName" placeholder="Enter the name of the bookmark" name="subject" required>
+                <input type="url" id="bookmarkURL" placeholder="Enter the bookmark URL" name="website" required>
+                <input type="text" id="bookmarkTags" placeholder="Enter tags (comma-separated)" name="tags" required>
+                <button class="btn primary" onclick="saveBookmark()">Save</button>
+            </div>
+        </section>
+        <section class="bookmarks">
+            <h2>Search Your Bookmarks</h2>
+            <input type="text" id="searchQuery" placeholder="Enter search query" oninput="filterBookmarks()">
+        </section>
+        <section class="bookmarks">
+            <h2>Your Bookmarks</h2>
+            <div class="bookmark-list" id="bookmarkList">
+                <!-- Bookmarks with 'Read Later' button will be dynamically added here -->
+            </div>
+        </section>
+        <section class="read-later">
+            <h2>Read Later Queue</h2>
+            <div class="read-later-list" id="readLaterList">
+    <!-- JavaScript to handle bookmark saving, retrieving, moving to 'Read Later' queue, and reverting back -->
+</div>
         </section>
     </main>
     <footer>
@@ -83,13 +57,7 @@
                 'event_category': 'Button Clicks',
                 'event_label': buttonLabel
             });
-        }
-        
-        const navigateToDashboard = (event) => {
-            event.preventDefault();
-            window.location.href = "dashboard.html";
-        }
     </script>
-    
+    <script src="bookmark.js"></script>
 </body>
 </html>
