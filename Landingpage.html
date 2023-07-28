@@ -6,17 +6,15 @@
     <title>Bookmark Holder - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TXWJVSXZ');</script>
-    <!-- End Google Tag Manager -->
-
 </head>
-
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXWJVSXZ');</script>
+<!-- End Google Tag Manager -->
+</script>
 <body>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <header>
@@ -38,7 +36,7 @@
                         <input type="text" id="username" name="username" required>
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>
-                        <button type="submit" class="btn primary" onclick="trackButtonClick('Sign In')">Sign In</button>
+                        <button type="submit" class="btn primary" onclick="navigateToDashboard(event)">Sign In</button>
                     </form>
                     <a href="#forgot-password">Forgot Password?</a>
                 </section>
@@ -55,7 +53,6 @@
                         data-login_uri="https://balajikasiraj07.github.io/assist/dashboard.html"
                         data-auto_prompt="false">
                     </div>
-
                     <div 
                         class="g_id_signin"
                         data-type="standard"
@@ -75,7 +72,7 @@
     </footer>
 
     <script>
-        // Google Analytics Event Tracking
+         // Google Analytics Event Tracking
         function trackButtonClick(buttonLabel) {
             gtag('event', 'click', {
                 'event_category': 'Button Clicks',
@@ -84,7 +81,7 @@
             // Call the original function to navigate to the dashboard
             navigateToDashboard(event);
         }
-        
+
         const navigateToDashboard = (event) => {
             event.preventDefault();
             window.location.href = "dashboard.html";
